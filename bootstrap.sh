@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# TODO: Make this script run the others, but break the parts I might need to retry into other scripts.
+
+# TODO: Make this script git clone the source repo for this script,
+# so that I only need to wget this script.
+
 echo "Ubuntu Bootstrap Script by EdTheDev"
 
 echo "Installing basic survival packages."
@@ -69,8 +74,6 @@ sudo vim /etc/ssh/sshd_config
 
 echo "Installing more stuff..."
 sudo apt-get install gnome-tweak-tool
-
-
 
 echo "Installing Screensaver"
 sudo apt-get install xscreensaver
