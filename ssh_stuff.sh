@@ -1,3 +1,11 @@
+read -n 1 -r -p "Generate a new SSH key? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ssh-keygen
+#else
+#    exit
+#    echo "Abort.."
+fi
 
 xclip -sel clip < ~/.ssh/id_rsa.pub
 echo "Copied your Public Key to the clipboard."
