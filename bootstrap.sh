@@ -9,6 +9,10 @@ echo "Ubuntu Bootstrap Script by EdTheDev"
 
 echo "Installing basic survival packages."
 sudo apt-get install vim git screen xclip openssh-server
+
+echo "You might want to pick a new default editor now that Vim is installed.."
+sudo update-alternatives --config editor
+
 sudo apt-get install dtach dvtm mcrypt keepassx xclip python ranger
 
 sudo apt-get install firefox
