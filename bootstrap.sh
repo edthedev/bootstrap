@@ -16,7 +16,11 @@ fi
 read -n 1 -r -p "Run the rest of the bootrap scripts now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    bootstrap/ssh_stuff.sh
-    bootstrap/graphical-setup.sh
-    bootstrap/everythingelse.sh
+	bootstrap/debian-desktop.sh
+	bootstrap/debian-dropbox.sh
+	bootstrap/everythingelse.sh
+	bootstrap/fedora-bootstrap.sh
+	bootstrap/firefox.sh
+	bootstrap/git-config.sh
+	bootstrap/ssh_stuff.sh
 fi
