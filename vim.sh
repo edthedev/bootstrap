@@ -1,6 +1,6 @@
 cd ~
 echo "Installing Vundle"
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
 echo "Installing your Vimrc"
 # git clone https://github.com/edthedev/vimrc.git
 ln -s ~/vimrc/vimrc ~/.vimrc
