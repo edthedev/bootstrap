@@ -4,15 +4,16 @@ In accordance with the Three_Vices_, a programmer may be *proud* of their workst
 
 .. _Three_Vices: _http://c2.com/cgi/wiki?LazinessImpatienceHubris
 
-On any Linux workstation.::
+To fetch the script on any Linux workstation.::
 
 	wget https://raw.githubusercontent.com/edthedev/bootstrap/master/bootstrap.sh
 
-On an Apple computer::
+To fetch the script on an Apple computer::
 
     curl https://raw.githubusercontent.com/edthedev/bootstrap/master/bootstrap.sh > bootstrap.sh
 
-Now run the script::
+Run the script to get a copy of the other scripts.::
+
 	chmod +x bootstrap.sh
 	./bootstrap.sh
 
