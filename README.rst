@@ -1,5 +1,9 @@
-Bootstrap a Debian Workstation
+Bootstrap a Workstation
 ==============================
+In accordance with the Three_Vices_, a programmer may be *proud* of their workstation configuration, *impatient* to have it set up on any new workstation, and much too *lazy* to do spend any time setting it up. 
+
+.. _Three_Vices: _http://c2.com/cgi/wiki?LazinessImpatienceHubris
+
 On any Linux workstation.::
 
 	wget https://raw.githubusercontent.com/edthedev/bootstrap/master/bootstrap.sh
