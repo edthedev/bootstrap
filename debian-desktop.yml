@@ -5,7 +5,7 @@
   sudo: yes
   tasks:
   - name: i3 and related
-    yum: pkg={{ item }} state=installed
+    apt: pkg={{ item }} state=installed
     with_items: 
     - i3
     - conky
