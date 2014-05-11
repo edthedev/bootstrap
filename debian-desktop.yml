@@ -1,27 +1,24 @@
 ---
 - hosts: localhost
+  gather_facts: no
+  sudo: yes
   tasks:
   - name: i3 and related
-    yum: pkg={ item }
+    yum: pkg={{ item }} state=installed
+    with_items: 
+    - i3
+    - conky
+    - xscreensaver
+    - xscreensaver-data-extra 
+    - xscreensaver-gl-extra
+#  - name: disable gnome-screensaver
+#    shell: 
+  - name: add xscreensaver to startup
+    shell: touch ~/.xinitrc; echo "xscreensaver -no-splash" >> ~/.xinitrc
 
-echo "Installing i3 and related."
-sudo apt-get install i3 conky 
+# echo "Disabling Gnome Screensaver"
+# sudo killall gnome-screensaver
+# gconftool-2 --type boolean -s /apps/gnome_settings_daemon/screensaver/start_screensaver false
 
-# sudo apt-get install firefox
-
-echo "Installing Screensaver"
-sudo apt-get install xscreensaver
-
-sudo apt-get install xscreensaver-data-extra xscreensaver-gl-extra -y
-
-echo "Disabling Gnome Screensaver"
-sudo killall gnome-screensaver
-gconftool-2 --type boolean -s /apps/gnome_settings_daemon/screensaver/start_screensaver false
-
-echo "Add screensaver daemon to startup."
-touch ~/.xinitrc
-echo "xscreensaver -no-splash" >> ~/.xinitrc
-
-echo "Enable lock, if desired."
-xscreensaver-demo
-
+# echo "Enable lock, if desired."
+# xscreensaver-demo
