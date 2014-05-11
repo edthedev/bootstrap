@@ -1,3 +1,5 @@
+sudo apt-get install vim-nox # Add Python, Ruby, Perl support
+
 cd ~
 echo "Installing Vundle"
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
