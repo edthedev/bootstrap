@@ -13,6 +13,9 @@ then
 	git clone https://github.com/edthedev/bootstrap.git
 fi
 
+echo "Ansible will be used to run the rest of the install scripts."
+apt-get install ansible
+
 read -n 1 -r -p "Run the rest of the bootrap scripts now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
