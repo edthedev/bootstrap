@@ -4,7 +4,8 @@ echo "Debian/Ubuntu Bootstrap Script by EdTheDev"
 echo " This is an interactive script."
 
 # echo "You need Vim and Screen to survive."
-# sudo apt-get install vim git screen xclip openssh-server
+sudo apt-get install vim git screen
+# sudo apt-get install xclip openssh-server
 
 read -n 1 -r -p "Clone the rest of this repository (recommended)? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -15,6 +16,12 @@ fi
 
 echo "Ansible will be used to run the rest of the install scripts."
 apt-get install ansible
+
+read -n 1 -r -p "Install i3 window manager now? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	sudo ansible-playbook debian-desktop.yml --check
+fi
 
 read -n 1 -r -p "Run the rest of the bootrap scripts now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
