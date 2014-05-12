@@ -16,6 +16,10 @@
 #    shell: 
   - name: add xscreensaver to startup
     shell: touch ~/.xinitrc; echo "xscreensaver -no-splash" >> ~/.xinitrc
+  - name: set dual displays
+    shell: xrandr --output DVI-1 --auto --rotate normal
+  - name: set dual displays2
+    shell: xrandr --output DVI-0 --auto --right-of $MONITORLEFT --rotate normal
 
 # echo "Disabling Gnome Screensaver"
 # sudo killall gnome-screensaver

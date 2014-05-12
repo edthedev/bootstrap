@@ -1,0 +1,11 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+# TODO: This could become a repeatable pattern...
+  tasks:
+  - name: clone dotfiles
+    git: dest=~/dotfiles accept_hostkey=yes repo=git@bitbucket.org:edthedev/dotfiles.git
+  - name: bootstrap dotfiles
+    shell: ~/dotfiles/bootstrap.sh
