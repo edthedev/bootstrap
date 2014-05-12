@@ -1,8 +1,9 @@
 echo "Lets install some Firefox plugins"
-firefox https://addons.mozilla.org/en-US/firefox/addon/omnibar/
-firefox https://addons.mozilla.org/en-us/firefox/addon/vimperator/
-firefox https://addons.mozilla.org/en-US/firefox/addon/web-developer/?redirectlocale=en-US&redirectslug=Web_Developer_Extension_%28external%29
-firefox https://addons.mozilla.org/en-US/firefox/addon/wot-safe-browsing-tool/
-firefox https://addons.mozilla.org/en-us/firefox/addon/sitelauncher/
-firefox https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/
-
+# alias web=firefox
+web=iceweasel
+$web https://addons.mozilla.org/en-US/firefox/addon/omnibar/
+$web https://addons.mozilla.org/en-US/firefox/addon/web-developer/?redirectlocale=en-US&redirectslug=Web_Developer_Extension_%28external%29
+$web https://addons.mozilla.org/en-US/firefox/addon/wot-safe-browsing-tool/
+$web https://addons.mozilla.org/en-us/firefox/addon/sitelauncher/
+$web https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/
+$web https://addons.mozilla.org/en-US/firefox/addon/its-all-text/
