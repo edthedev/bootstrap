@@ -1,0 +1,10 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+# TODO: This could become a repeatable pattern...
+  tasks:
+  - name: download copy agent
+    shell: wget https://copy.com/install/linux/Copy.tgz -O ~/Downloads/Copy.tgz
+
