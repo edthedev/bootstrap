@@ -9,6 +9,7 @@
     with_items: 
     - i3
     - conky
+    - vim-gnome
     - xscreensaver
     - xscreensaver-data-extra 
     - xscreensaver-gl-extra
