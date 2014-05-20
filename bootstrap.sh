@@ -14,8 +14,24 @@ then
 	git clone https://github.com/edthedev/bootstrap.git
 fi
 
-echo "Ansible will be used to run the rest of the install scripts."
-apt-get install ansible
+read -n 1 -r -p "Is this Debian or Ubuntu? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	bootstrap/debian-developer.sh
+fi
+
+read -n 1 -r -p "Is this OSX Mavericks? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	bootstrap/mac-developer.sh
+fi
+
+echo "You should install Ansible next. It will be used to run the rest of the install scripts."
+read -n 1 -r -p "Is this OSX Mavericks? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	bootstrap/ansible.sh
+fi
 
 read -n 1 -r -p "Install i3 window manager now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -34,7 +50,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	bootstrap/firefox.sh
 fi
-
 
 read -n 1 -r -p "Run the rest of the bootrap scripts now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
