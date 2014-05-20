@@ -14,26 +14,21 @@ then
 	git clone https://github.com/edthedev/bootstrap.git
 fi
 
-read -n 1 -r -p "Is this Debian or Ubuntu? [y/N]"
+read -n 1 -r -p "Install Ansible for Debian / Ubuntu? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	bootstrap/debian-developer.sh
+	bootstrap/debian-ansible.sh
 fi
 
-read -n 1 -r -p "Is this OSX Mavericks? [y/N]"
+read -n 1 -r -p "Install Ansible for OSX Mavericks? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	bootstrap/mac-developer.sh
+	bootstrap/mac-ansible.sh
 fi
 
-echo "You should install Ansible next. It will be used to run the rest of the install scripts."
-read -n 1 -r -p "Is this OSX Mavericks? [y/N]"
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-	bootstrap/ansible.sh
-fi
-
-read -n 1 -r -p "Install i3 window manager now? [y/N]"
+read -n 1 -r -p "Install i3 window manager on Debian/Ubuntu now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	sudo ansible-playbook debian-desktop.yml --check
