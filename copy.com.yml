@@ -5,6 +5,7 @@
   sudo: no
 # TODO: This could become a repeatable pattern...
   tasks:
-  - name: download copy agent
-    shell: wget https://copy.com/install/linux/Copy.tgz -O ~/Downloads/Copy.tgz
-
+#  - name: download copy agent
+#   shell: curl https://copy.com/install/linux/Copy.tgz > ~/Downloads/Copy.tgz
+  - name: extract copy agent
+    shell: cd ~; tar xzvf ~/Downloads/Copy.tgz 
