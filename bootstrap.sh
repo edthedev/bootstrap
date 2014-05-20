@@ -40,6 +40,12 @@ then
 	bootstrap/ssh_stuff.sh
 fi
 
+read -n 1 -r -p "Install Copy.com now? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	sudo ansible-playbook copy.com.yml --check
+fi
+
 read -n 1 -r -p "Setup Firefox now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -52,6 +58,5 @@ then
 	bootstrap/debian-desktop.sh
 	bootstrap/debian-dropbox.sh
 	bootstrap/everythingelse.sh
-	bootstrap/fedora-bootstrap.sh
 	bootstrap/git-config.sh
 fi
