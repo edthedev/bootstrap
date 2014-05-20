@@ -23,6 +23,19 @@ then
 	sudo ansible-playbook debian-desktop.yml --check
 fi
 
+read -n 1 -r -p "Setup SSH now? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	bootstrap/ssh_stuff.sh
+fi
+
+read -n 1 -r -p "Setup Firefox now? [y/N]"
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	bootstrap/firefox.sh
+fi
+
+
 read -n 1 -r -p "Run the rest of the bootrap scripts now? [y/N]"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -30,7 +43,5 @@ then
 	bootstrap/debian-dropbox.sh
 	bootstrap/everythingelse.sh
 	bootstrap/fedora-bootstrap.sh
-	bootstrap/firefox.sh
 	bootstrap/git-config.sh
-	bootstrap/ssh_stuff.sh
 fi
