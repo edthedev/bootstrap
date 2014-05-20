@@ -1,5 +1,6 @@
 echo "Lets install some Firefox plugins"
 # web=iceweasel # for Debian
+# web=firefox # for Ubuntu/Fedora
 web="open -a Firefox.app" # for Apple OSX Mavericks
 
 $web https://addons.mozilla.org/en-US/firefox/addon/omnibar/
