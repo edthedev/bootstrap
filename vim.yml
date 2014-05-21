@@ -1,0 +1,18 @@
+---
+- hosts: 127.0.0.1
+  vars:
+  connection: local
+  gather_facts: no
+  sudo: no
+  tasks:
+  - name: clone Vundle
+    git: accept_hostkey=yes repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+# TODO: This would be nice, rather than relying on dotfiles repo
+  #- name: clone vimrc
+  #  git: repo=https://github.com/edthedev/vimrc.git dest=~/vimrc
+  - name: link vimrc
+    shell: ln -s ~/vimrc/vimrc ~/.vimrc
+#  - name: update Vim with Python, Ruby, Perl support
+#    apt: vim-nox
+  - name: install bundles from Vimrc
+    shell: vim +:PluginInstall
