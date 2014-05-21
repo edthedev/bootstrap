@@ -5,6 +5,6 @@
   sudo: no
   tasks:
   - name: download copy agent
-   shell: curl https://copy.com/install/mac/Copy.dmg > ~/Downloads/Copy.dmg
+    shell: curl https://copy.com/install/mac/Copy.dmg > ~/Downloads/Copy.dmg
   - name: extract copy agent
     shell: cd ~/Downloads; open Copy.dmg
