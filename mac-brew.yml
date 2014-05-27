@@ -1,0 +1,10 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+  tasks:
+  - name: install packages with Brew
+    shell: brew install {{ pkg }}
+    with_items: 
+    - ctags
