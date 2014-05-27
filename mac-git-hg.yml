@@ -1,0 +1,21 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+  tasks:
+  - name: bin dir
+    action: file path=~/bin state=directory
+  - name: install git-remote-hg script
+    shell: curl https://raw.githubusercontent.com/felipec/git-remote-hg/master/git-remote-hg > ~/bin/git-remote-hg
+  - name: executable it
+    action: file path=~/bin/git-remote-hg mode=750
+  - name: enable with git
+    shell: git config --global remote-hg.hg-git-compat true
+  - name: install mercurial
+    shell: brew install hg
+  - name: install python mercurial library
+    pip: mercurial
+# Example command...
+#   git remote add remotename hg::http://bitbucket.org/user/repo
+#   git pull remotename
