@@ -5,10 +5,10 @@
   sudo: no
   tasks:
   - name: bin dir
-    directory: ~/bin
+    action: file path=~/bin state=directory
   - name: install git-remote-hg script
     shell: curl https://raw.githubusercontent.com/felipec/git-remote-hg/master/git-remote-hg > ~/bin/git-remote-hg
   - name: executable it
-    file: ~/bin/git-remote-hg permissions=750
+    action: file path=~/bin/git-remote-hg mode=750
   - name: enable with git
     shell: git config --global remote-hg.hg-git-compat true
