@@ -8,3 +8,6 @@
     shell: brew install {{ pkg }}
     with_items: 
     - ctags
+    - bash-completion 
+    - ssh-copy-id 
+    - wget
