@@ -1,0 +1,8 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+  tasks:
+   - name: one am backup by cron 
+     cron: hour=1 job='~/dotfiles/scripts/sync-pictures-to sydeswype' name='backup pictures' 
