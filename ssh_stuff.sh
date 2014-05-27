@@ -23,3 +23,6 @@ $web https://bitbucket.org/account/user/edthedev/ssh-keys/
 
 echo "Opening pubkey in editor (OSX Mavericks)"
 open -a TextEdit ~/.ssh/id_rsa.pub
+
+echo "Enabling remote desktop on Mac"
+sudo serveradmin settings info:enableSSH = yes
