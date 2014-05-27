@@ -12,3 +12,5 @@
     action: file path=~/bin/git-remote-hg mode=750
   - name: enable with git
     shell: git config --global remote-hg.hg-git-compat true
+  - name: install mercurial
+    shell: brew install hg
