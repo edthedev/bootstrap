@@ -23,3 +23,5 @@ $web https://bitbucket.org/account/user/edthedev/ssh-keys/
 
 echo "Opening pubkey in editor (OSX Mavericks)"
 open -a TextEdit ~/.ssh/id_rsa.pub
+
+echo "On Mac, remember to enable in settings."
