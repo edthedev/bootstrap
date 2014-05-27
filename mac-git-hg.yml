@@ -14,3 +14,5 @@
     shell: git config --global remote-hg.hg-git-compat true
   - name: install mercurial
     shell: brew install hg
+  - name: install python mercurial library
+    pip: mercurial
