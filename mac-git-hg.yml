@@ -1,0 +1,12 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  sudo: no
+  tasks:
+  - name: bin dir
+    directory: ~/bin
+  - name: install git-remote-hg script
+    shell: curl https://raw.githubusercontent.com/felipec/git-remote-hg/master/git-remote-hg > ~/bin/git-remote-hg
+  - name: executable it
+    file: ~/bin/git-remote-hg permissions=750
