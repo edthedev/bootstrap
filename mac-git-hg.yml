@@ -16,3 +16,6 @@
     shell: brew install hg
   - name: install python mercurial library
     pip: mercurial
+# Example command...
+#   git remote add remotename hg::http://bitbucket.org/user/repo
+#   git pull remotename
