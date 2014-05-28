@@ -5,7 +5,7 @@
   sudo: no
   tasks:
   - name: install packages with Brew
-    shell: brew install {{ pkg }}
+    shell: brew install {{ item }}
     with_items: 
     - ctags
     - bash-completion 
