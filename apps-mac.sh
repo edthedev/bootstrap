@@ -15,3 +15,6 @@ $web http://bahoom.com/hyperswitch
 $web https://www.vagrantup.com/downloads.html
 # VirtualBox
 $web https://www.virtualbox.org/wiki/Downloads
+
+# Keepass for passwords
+$web http://www.keepassx.org/downloads
